@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ListRender from './components/ListRender';
+import CondicionalRender from './components/CondicionalRender';
 import ManageData from './components/ManageData';
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
 
     <div>
       <ListRender/>
+    </div>
+
+    <div>
+      <CondicionalRender />
     </div>
   </div>
     
