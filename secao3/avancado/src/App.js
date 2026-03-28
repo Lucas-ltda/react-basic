@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ShowUserName from './components/ShowUserName';
+import ExecuteFunction from './components/ExecuteFunction';
 import CarDetails from './components/CarDetails';
 import ListRender from './components/ListRender';
 import CondicionalRender from './components/CondicionalRender';
@@ -16,6 +17,9 @@ function App() {
     { id: 3, brand: "Lamborghini", km: 5000, color: "Prata", newCar: false }
   ];
 
+  function eventClick(){
+    window.alert("Evento do componente pai sendo executado")
+  }
 
   return (
     <div className="App">
@@ -54,18 +58,22 @@ function App() {
       <CarDetails brand = "Toyota" km = {5000} color = "Prata" newCar ={false} />
     </div>
     {/* loop de array de objetos  */}
-    <div>
+    <div>2
       <h2>Loop de array com objetos</h2>
       {
         cars.map((car) =>(
           <CarDetails 
-          brand = {car.brand} 
+          key = {car.id}
+          brand = {car.brand}
           km = {car.km} 
           color = {car.color} 
           newCar={car.km} />
         ))
       }
     </div>
+
+    <ExecuteFunction myFunction = {eventClick} />
+
   </div>
     
   );

@@ -1,6 +1,6 @@
 
 
-const showUserName = (props) =>{
+const ShowUserName = (props) =>{
     return(
         <div>
             <h2> Esse é o nome do usuario com sendo exibido com props: {props.name}</h2>
@@ -8,4 +8,4 @@ const showUserName = (props) =>{
     )
 }
 
-export default showUserName;
+export default ShowUserName;
