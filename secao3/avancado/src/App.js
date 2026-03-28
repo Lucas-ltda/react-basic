@@ -5,7 +5,10 @@ import ExecuteFunction from './components/ExecuteFunction';
 import CarDetails from './components/CarDetails';
 import ListRender from './components/ListRender';
 import CondicionalRender from './components/CondicionalRender';
+import ChangeMessageState from './components/ChangeMessage';
 import ManageData from './components/ManageData';
+import Message from './components/Message';
+import { useState } from 'react';
 
 function App() {
   const userName  = "Lucas"
@@ -21,6 +24,12 @@ function App() {
     window.alert("Evento do componente pai sendo executado")
   }
 
+  const [message, setMessage] = useState(" ");
+  
+  const handleMessage = (msg) =>{
+    setMessage(msg);
+  }
+  
   return (
     <div className="App">
     <h3>
@@ -71,9 +80,11 @@ function App() {
         ))
       }
     </div>
-
     <ExecuteFunction myFunction = {eventClick} />
-
+      
+    {/* state lifit */}
+    <Message msg={message}/>
+    <ChangeMessageState handleMessage={handleMessage}/>
   </div>
     
   );
