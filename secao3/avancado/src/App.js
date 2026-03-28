@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import ShowUserName from './components/ShowUserName';
+import CarDetails from './components/CarDetails';
 import ListRender from './components/ListRender';
 import CondicionalRender from './components/CondicionalRender';
 import ManageData from './components/ManageData';
 
 function App() {
-  const userName  = "Lucas";
+  const userName  = "Lucas"
+  
+  const carBrand = "GM Group"
+  const carKm = 1000
+  const carColor = "Azul"
 
   return (
     <div className="App">
@@ -38,6 +43,9 @@ function App() {
     </div>
     <div>
       <ShowUserName name = {userName}/>
+    </div>
+    <div>
+      <CarDetails brand = {carBrand} km = {carKm} color = {carColor}/>
     </div>
   </div>
     
