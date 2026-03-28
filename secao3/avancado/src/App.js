@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import ShowUserName from './components/ShowUserName';
 import ListRender from './components/ListRender';
 import CondicionalRender from './components/CondicionalRender';
 import ManageData from './components/ManageData';
 
 function App() {
+  const userName  = "Lucas";
+
   return (
     <div className="App">
     <h3>
@@ -32,6 +35,9 @@ function App() {
 
     <div>
       <CondicionalRender />
+    </div>
+    <div>
+      <ShowUserName name = {userName}/>
     </div>
   </div>
     
