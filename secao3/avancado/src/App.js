@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+
 import ShowUserName from './components/ShowUserName';
 import ExecuteFunction from './components/ExecuteFunction';
+import UserDetails from './UserDetails';
 import CarDetails from './components/CarDetails';
 import ListRender from './components/ListRender';
 import CondicionalRender from './components/CondicionalRender';
@@ -29,6 +31,14 @@ function App() {
   const handleMessage = (msg) =>{
     setMessage(msg);
   }
+
+
+
+  const people = [
+    { id: 1, name: "Lucas", age: 25 },
+    { id: 2, name: "Maria", age: 30 },
+    { id: 3, name: "João", age: 16 }
+  ];
   
   return (
     <div className="App">
@@ -67,7 +77,7 @@ function App() {
       <CarDetails brand = "Toyota" km = {5000} color = "Prata" newCar ={false} />
     </div>
     {/* loop de array de objetos  */}
-    <div>2
+    <div>
       <h2>Loop de array com objetos</h2>
       {
         cars.map((car) =>(
@@ -84,7 +94,23 @@ function App() {
       
     {/* state lifit */}
     <Message msg={message}/>
+
     <ChangeMessageState handleMessage={handleMessage}/>
+
+    <h2>Atividade da udemy</h2>
+      
+      <div>
+
+      {people.map((person)=> 
+        <UserDetails
+          id = {person.id}
+          name = {person.name}
+          age = {person.age}
+        />)}
+
+    
+      </div>
+
   </div>
     
   );
