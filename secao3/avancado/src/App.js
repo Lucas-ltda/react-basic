@@ -9,9 +9,6 @@ import ManageData from './components/ManageData';
 function App() {
   const userName  = "Lucas"
   
-  const carBrand = "GM Group"
-  const carKm = 1000
-  const carColor = "Azul"
 
   return (
     <div className="App">
@@ -45,7 +42,9 @@ function App() {
       <ShowUserName name = {userName}/>
     </div>
     <div>
-      <CarDetails brand = {carBrand} km = {carKm} color = {carColor}/>
+      <CarDetails brand = "GmGroup" km = {10000} color = "Azul" newCar ={false} />
+      <CarDetails brand = "VW" km = {0} color = "Vermelho" newCar ={true} />
+      <CarDetails brand = "Toyota" km = {5000} color = "Prata" newCar ={false} />
     </div>
   </div>
     
